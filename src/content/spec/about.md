@@ -1,6 +1,6 @@
 # Tentang Saya
 
-Saya merupakan seorang mahasiswa yang memiliki ketertarikan terhadap angka dan proses perhitungan sejak saya duduk di bangku sekolah dasar. Ketertarikan tersebut menjadi salah satu alasan saya memilih melanjutkan pendidikan di Jurusan Matematika.
+Saya merupakan seorang mahasiswa yang memiliki ketertarikan terhadap angka dan proses perhitungan sejak saya duduk di bangku sekolah dasar. Ketertarikan tersebut menjadi salah satu alasan saya memilih melanjutkan pendidikan di Program Studi Statistika.
 
 ## Riwayat Pendidikan
 

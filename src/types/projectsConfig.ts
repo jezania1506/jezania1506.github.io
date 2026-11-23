@@ -23,8 +23,8 @@ export interface ProjectItem {
 	summary: string;
 	/** Tujuan proyek. */
 	objective?: string;
-	/** Tahapan engerjaan proyek. */
-	proces?: string[];
+	/** Tahapan pengerjaan proyek. */
+	process?: string[];
 	/** Hasil dan pemelajaran yang diperoleh. */
 	learning?: string;
 	category: ProjectCategory["key"];

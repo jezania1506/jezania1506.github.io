@@ -10,7 +10,7 @@ import { withUserConfig } from "../utils/config-overlay.ts";
  * 类型见 src/types/config.ts。
  */
 export const siteConfig: SiteConfig = withUserConfig("site", {
-	site: "https://shirone.mysqil.com/",
+	site: "https://jezania1506.github.io",
 	base: "/",
 	title: "Jezania Tallia Palangda",
 	subtitle: "Personal Portfolio | Mahasiswa Statistika",
