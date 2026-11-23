@@ -13,10 +13,11 @@ export const projectsData: ProjectItem[] = [
 		objective:
 			"Proyek ini bertujuan untuk menerapkan pengetahuan dasar statistika melalui kegiatan survei dan pengumpulan data. Selain itu, proyek ini dilakukan untuk melatih kemampuan dalam menyusun kuesioner, memperoleh data dari responden, serta memahami bagaimana data dapat digunakan untuk menghasilkan informasi yang bermanfaat.",
 		process: [
-			"Menentukan topik survei dan menyusun pertanyaan kuesioner menggunakan Google Forms.",
-			"Menyebarkan kuesioner kepada mahasiswa untuk memperoleh tanggapan responden.",
-			"Mengumpulkan dan memeriksa tanggapan responden sebagai data penelitian.",
-			"Mengolah dan menganalisis data menggunakan Google Sheets dan Microsoft Excel setelah data terkumpul.",
+			"Menentukan tujuan survei dan informasi yang ingin diperoleh mengenai pola pengeluaran mahasiswa.",
+			"Menyusun pertanyaan kuesioner menggunakan Google Forms dengan memperhatikan kesesuaian pertanyaan terhadap tujuan survei.",
+			"Menyebarkan kuesioner kepada mahasiswa dan mengumpulkan tanggapan responden.",
+			"Memeriksa kelengkapan data yang telah terkumpul sebelum memasuki tahap pengolahan.",
+			"Mengolah data menggunakan Google Sheets dan Microsoft Excel untuk memperoleh ringkasan serta gambaran pola pengeluaran mahasiswa.",
 		],
 		learning:
 			"Melalui proyek ini, saya memperoleh pengalaman dalam menyusun kuesioner dan melakukan pengumpulan data melalui survei. Saya juga mempelajari tahapan awal penelitian sederhana, mulai dari menentukan informasi yang ingin diperoleh hingga mengumpulkan data dari responden. Karena proses pengumpulan data masih berlangsung, hasil analisis belum dapat disajikan.",
