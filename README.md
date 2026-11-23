@@ -103,3 +103,12 @@ Tema telah disesuaikan dengan kebutuhan portofolio pribadi, termasuk pengubahan 
 ## Tujuan Pengembangan
 
 Pengembangan website ini bertujuan untuk memenuhi tugas Take Home Web Portfolio sekaligus menjadi dokumentasi perjalanan belajar dan pengembangan kemampuan selama menempuh pendidikan di Program Studi Statistika, Universitas Cenderawasih.
+
+## 12. Pengembangan Selanjutnya
+
+Beberapa pengembangan yang dapat dilakukan pada website ini ke depannya meliputi:
+
+- Menambahkan hasil analisis setelah survei pengeluaran mahasiswa selesai.
+- Memperbarui dokumentasi proyek berdasarkan pengalaman pembelajaran terbaru.
+- Menyempurnakan tampilan dan pengalaman pengguna.
+- Menambahkan dokumentasi keterampilan dan hasil pembelajaran lainnya.
