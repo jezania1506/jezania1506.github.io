@@ -1,0 +1,46 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getSortedPosts } from "../utils/content-utils";
+import { postListConfig } from "@/config/postListConfig";
+import MainGridLayout from "../layouts/MainGridLayout.astro";
+import Card from "@components/atoms/display/Card.svelte";
+
+export const getStaticPaths = (async ({ paginate }) => {
+    const allBlogPosts = await getSortedPosts();
+    return paginate(allBlogPosts, {
+        pageSize: postListConfig.pageSize,
+    });
+}) satisfies GetStaticPaths;
+---
+
+<MainGridLayout page="home">
+    <div class="flex w-full rounded-[var(--shape-corner-l)] overflow-hidden relative">
+        <Card
+            color="var(--card-bg)"
+            radius="l"
+            class="z-10 p-6 lg:p-8 relative w-full"
+        >
+            <h1 class="text-2xl font-bold mb-4">
+                Selamat Datang di Portofolio Saya
+            </h1>
+
+            <p class="mb-4">
+                Halo! Perkenalkan, saya Jezania Tallia Palangda, biasa dipanggil Esa.
+                Saya berasal dari Wamena, sebuah kota kecil di pegunungan Papua.
+            </p>
+
+            <p class="mb-4">
+                Saya merupakan mahasiswa Program Studi Statistika,
+                Fakultas Matematika dan Ilmu Pengetahuan Alam,
+                Universitas Cenderawasih.
+            </p>
+
+            <p>
+                Saya memiliki ketertarikan pada matematika, statistika,
+                dan pengolahan data. Melalui portofolio ini, saya ingin
+                memperkenalkan perjalanan pendidikan serta berbagai
+                proyek yang saya kerjakan.
+            </p>
+        </Card>
+    </div>
+</MainGridLayout>

@@ -1,0 +1,119 @@
+---
+import MainGridLayout from "../../layouts/MainGridLayout.astro";
+import Card from "../../components/atoms/display/Card.svelte";
+import { projectsData } from "../../data/projects";
+
+export function getStaticPaths() {
+    return projectsData.map((project) => ({
+        params: { slug: project.key },
+        props: { project },
+    }));
+}
+
+const { project } = Astro.props;
+
+const phaseLabel =
+    project.phase === "completed"
+        ? "Selesai"
+        : project.phase === "building"
+          ? "Sedang dikerjakan"
+          : "Dalam tahap perencanaan";
+
+const pageTitle = project.title;
+const pageDescription = project.summary;
+---
+
+<MainGridLayout
+    title={pageTitle}
+    page="projects"
+>
+    <div class="flex w-full rounded-[var(--shape-corner-l)] overflow-hidden relative">
+        <Card
+            color="var(--card-bg)"
+            radius="l"
+            class="z-10 p-6 lg:p-8 relative w-full"
+        >
+            <h1 class="text-2xl font-bold mb-4">
+                {project.title}
+            </h1>
+
+            <p class="mb-6 leading-relaxed">
+                {project.summary}
+            </p>
+
+            {project.objective && (
+                <section class="mb-6">
+                    <h2 class="text-lg font-semibold mb-3">
+                        Tujuan Proyek
+                    </h2>
+                    <p class="leading-relaxed">
+                        {project.objective}
+                    </p>
+                </section>
+            )}
+
+            {project.process && (
+                <section class="mb-6">
+                    <h2 class="text-lg font-semibold mb-3">
+                        Proses Pengerjaan
+                    </h2>
+                    <ol class="list-decimal pl-6 space-y-2 leading-relaxed">
+                        {project.process.map((step: string) => (
+                            <li>{step}</li>
+                        ))}
+                    </ol>
+                </section>
+            )}
+
+            {project.learning && (
+                <section class="mb-6">
+                    <h2 class="text-lg font-semibold mb-3">
+                        Hasil dan Pembelajaran
+                    </h2>
+                    <p class="leading-relaxed">
+                        {project.learning}
+                    </p>
+                </section>
+            )}
+
+            <div class="mb-6">
+                <h2 class="text-lg font-semibold mb-3">
+                    Informasi Proyek
+                </h2>
+
+                <p class="mb-2">
+                    <strong>Kategori:</strong> {project.category}
+                </p>
+
+                <p class="mb-2">
+                    <strong>Status:</strong> {phaseLabel}
+                </p>
+
+                <p>
+                    <strong>Tahun:</strong> {project.year}
+                </p>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-lg font-semibold mb-3">
+                    Teknologi dan Perangkat yang Digunakan
+                </h2>
+
+                <div class="flex flex-wrap gap-2">
+                    {project.technologies.map((technology: string) => (
+                        <span class="px-3 py-2 rounded-full bg-[var(--surface-container-high)] text-sm">
+                            {technology}
+                        </span>
+                    ))}
+                </div>
+            </div>
+
+            <a
+                href="/projects/"
+                class="text-[var(--primary)] font-semibold"
+            >
+                ← Kembali ke Daftar Proyek
+            </a>
+        </Card>
+    </div>
+</MainGridLayout>
